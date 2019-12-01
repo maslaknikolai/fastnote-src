@@ -1,9 +1,8 @@
 <template>
   <div class="note">
     <div class="note__header">
-      <Btn v-if="note.isStored" @click="saveOnServer">Save on server</Btn>
       <Date v-model="note.date_create" />
-      <DeleteBtn @confirm="remove()" />
+      <DeleteBtn @confirm="remove(note)" ref="removeBtn" />
     </div>
 
     <Answers
@@ -14,6 +13,7 @@
 
 <script>
 import { useStore } from '@/composables/use-store'
+import useRemoveNote from '@/composables/use-remove-note'
 
 import Answers from './Answers'
 import DeleteBtn from '@/components/DeleteBtn'
@@ -31,12 +31,11 @@ export default {
       required: true
     }
   },
-  setup(props) {
+  setup() {
     const store = useStore()
 
-    function remove() {
-      store.commit('REMOVE_NOTE', props.note)
-    }
+    const { remove } = useRemoveNote(store)
+
     return {
       remove
     }
