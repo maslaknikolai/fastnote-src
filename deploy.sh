@@ -3,6 +3,7 @@
 set -e
 
 yarn
+yarn test:unit
 yarn build
 
 cd dist
@@ -14,6 +15,3 @@ git commit -m 'deploy'
 git push -f git@github.com:maslaknikolai/fastnote.git master
 
 cd -
-
-rm -rf dist/
-rm -rf node_modules/
