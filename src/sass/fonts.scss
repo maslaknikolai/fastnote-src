@@ -1,0 +1,6 @@
+@import 'font-face';
+
+@include font-face("ALS", "~@/assets/fonts/ALSEkibastuzRegular/ALSEkibastuzRegular");
+@include font-face("ALS", "~@/assets/fonts/ALSEkibastuzHeavy/ALSEkibastuzHeavy", 500);
+@include font-face("ALS", "~@/assets/fonts/ALSEkibastuzBold/ALSEkibastuzBold", bold);
+@include font-face("ALS", "~@/assets/fonts/ALSEkibastuzBlack/ALSEkibastuzBlack", 800);

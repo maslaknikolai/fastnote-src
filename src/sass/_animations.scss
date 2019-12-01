@@ -1,0 +1,8 @@
+.animation-fade {
+    &-enter-active, &-leave-active {
+        transition: all .5s;
+    }
+    &-enter, &-leave-active {
+        opacity: 0 !important;
+    }
+}

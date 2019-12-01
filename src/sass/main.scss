@@ -1,0 +1,93 @@
+@import './common';
+@import './fonts';
+@import './tooltip';
+
+* {
+	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: 0;
+  border: 0;
+}
+
+html {
+	font-size: var(--default-font-size);
+	font-family: var(--default-font);
+	@include media-max(800px) {
+		font-size: var(--min-font-size);
+  }
+}
+
+body, html {
+	width: 100%;
+	min-height: 100%;
+}
+
+body {
+	background: linear-gradient(to bottom, var(--bg1) 0%, var(--bg2) 100%);
+	color: var(--text-color);
+}
+
+a {
+  color: var(--accent2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent2);
+}
+
+@for $i from 0 through 10 {
+  .mt-#{$i} {
+    margin-top: #{$i * 5}px !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i * 5}px !important;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i * 5}px !important;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i * 5}px !important;
+  }
+  .mx-#{$i} {
+    margin-left: #{$i * 5}px !important;
+    margin-right: #{$i * 5}px !important;
+  }
+  .my-#{$i} {
+    margin-top: #{$i * 5}px !important;
+    margin-bottom: #{$i * 5}px !important;
+  }
+  .ma-#{$i} {
+    margin: #{$i * 5}px !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: #{$i * 5}px !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i * 5}px !important;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i * 5}px !important;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i * 5}px !important;
+  }
+  .px-#{$i} {
+    padding-left: #{$i * 5}px !important;
+    padding-right: #{$i * 5}px !important;
+  }
+  .py-#{$i} {
+    padding-top: #{$i * 5}px !important;
+    padding-bottom: #{$i * 5}px !important;
+  }
+  .pa-#{$i} {
+    padding: #{$i * 5}px !important;
+  }
+
+  .tty#{$i} {
+    transform: translateY(#{$i}px);
+  }
+
+  .ttx#{$i} {
+    transform: translateX(#{$i}px);
+  }
+}
