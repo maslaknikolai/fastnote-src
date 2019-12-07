@@ -41,6 +41,6 @@ export default {
     profile() {
         const endpoint = '/auth/profile'
         return axios.get(endpoint)
-            .then(response => response.data.user)
+            .then(response => response.data.data)
     }
 }

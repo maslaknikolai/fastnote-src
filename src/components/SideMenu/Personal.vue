@@ -12,6 +12,8 @@
       </div>
 
       <Btn @click="logout()">Logout</Btn>
+
+      <Channels />
     </template>
   </div>
 </template>
@@ -20,8 +22,12 @@
 import { useStore } from '@/composables/use-store'
 import { computed } from '@vue/composition-api'
 import auth from '@/plugins/auth'
+import Channels from './Channels'
 
 export default {
+  components: {
+    Channels
+  },
   setup() {
     const store = useStore()
     const userModule = store.state.user

@@ -1,7 +1,7 @@
 <template>
   <div>
     <NoteAddedNotifier />
-    <!-- <SideMenu /> -->
+    <SideMenu />
     <div class="layout">
       <Logo />
       <Notes />
@@ -15,7 +15,7 @@
 import { provideStore } from '@/composables/use-store'
 
 import Logo from './components/Logo'
-import SideMenu from './components/SideMenu'
+import SideMenu from './components/SideMenu/SideMenu'
 import Notes from './components/Notes/Notes'
 import AddNotePanel from './components/AddNotePanel/AddNotePanel'
 import AddNotePanelToggleButton from './components/AddNotePanelToggleButton'
