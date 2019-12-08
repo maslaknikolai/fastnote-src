@@ -6,5 +6,17 @@ cache:
     - node_modules
 script:
   - npm run test:unit
+  - yarn build
 after_script:
   - cat ./coverage/lcov.info | coveralls
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  committer-from-gh: true
+  skip-cleanup: true
+  keep-history: false
+  local-dir: dist
+  repo: maslaknikolai/fastnote
+  target-branch: master
+  on:
+    branch: master
