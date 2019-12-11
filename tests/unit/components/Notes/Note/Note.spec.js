@@ -22,10 +22,10 @@ describe('@/components/Notes/Note/Note.vue', () => {
       propsData: { note }
     })
 
-    wrapper.vm.remove = jest.fn();
+    wrapper.vm.remove = jest.fn()
 
     wrapper.find({ ref: 'removeBtn' }).vm.$emit('confirm')
 
-    expect(wrapper.vm.remove).toHaveBeenCalledWith(note);
+    expect(wrapper.vm.remove).toHaveBeenCalledWith(note)
   })
 })

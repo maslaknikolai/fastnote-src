@@ -5,7 +5,7 @@
         v-model="editableList.title"
         light
         label="Option list title"
-        :rules="[ v => !!v ]"
+        :rules="[v => !!v]"
       />
       <DeleteBtn
         v-if="!create"
@@ -14,7 +14,9 @@
       />
     </div>
 
-    <div class="mt-3">Options</div>
+    <div class="mt-3">
+      Options
+    </div>
 
     <Options v-model="editableList.options" />
 
@@ -35,7 +37,7 @@
       :disabled="!!formErrors.length"
       @click="save()"
     >
-      {{ create ? 'Create list' : 'Save'}}
+      {{ create ? 'Create list' : 'Save' }}
     </Btn>
 
     <Btn
@@ -84,30 +86,30 @@ export default {
     })
 
     watch(
-        () => editableList.options,
-        () => {
-            const { options } = editableList
-            const i = options.length - 1
-            const last = options[i]
+      () => editableList.options,
+      () => {
+        const { options } = editableList
+        const i = options.length - 1
+        const last = options[i]
 
-            if (last.name.length > 0) {
-                options.push({
-                    name: '',
-                    isDefault: false,
-                    color: '#fff'
-                })
-            } else {
-                const preLast = options[i - 1]
-                if (preLast) {
-                    if (preLast.name.length === 0) {
-                        options.splice(i, 1)
-                    }
-                }
+        if (last.name.length > 0) {
+          options.push({
+            name: '',
+            isDefault: false,
+            color: '#fff'
+          })
+        } else {
+          const preLast = options[i - 1]
+          if (preLast) {
+            if (preLast.name.length === 0) {
+              options.splice(i, 1)
             }
-        },
-        {
-            deep: true,
+          }
         }
+      },
+      {
+        deep: true,
+      }
     )
 
     const formErrors = computed(() => {

@@ -1,14 +1,28 @@
 <template>
   <div>
-    <Hamburger v-if="!isAuthShown" @click="isAuthShown = true" />
+    <Hamburger
+      v-if="!isAuthShown"
+      @click="isAuthShown = true"
+    />
 
     <transition name="animation">
-      <div v-if="isAuthShown" class="overlay" @click.self="isAuthShown = false">
+      <div
+        v-if="isAuthShown"
+        class="overlay"
+        @click.self="isAuthShown = false"
+      >
         <div class="side">
           <Personal v-if="token" />
           <template v-else>
-            <LoginForm v-if="form  === 'login'" @register="form = 'register'" @close="isAuthShown = false" />
-            <RegisterForm v-else-if="form === 'register'" @login="form = 'login'" />
+            <LoginForm
+              v-if="form === 'login'"
+              @register="form = 'register'"
+              @close="isAuthShown = false"
+            />
+            <RegisterForm
+              v-else-if="form === 'register'"
+              @login="form = 'login'"
+            />
           </template>
         </div>
       </div>

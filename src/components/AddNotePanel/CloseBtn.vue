@@ -1,11 +1,17 @@
 <template functional>
-    <button class="close-btn" @click="listeners.click">
-        <Icon class="close-btn__icon" icon="fad-plus"/>
-    </button>
+  <button
+    class="close-btn"
+    @click="listeners.click"
+  >
+    <Icon
+      class="close-btn__icon"
+      icon="fad-plus"
+    />
+  </button>
 </template>
 
 <script>
-    export default { }
+export default { }
 </script>
 
 <style lang="scss" scoped>

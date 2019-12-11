@@ -1,6 +1,9 @@
 <template functional>
   <div class="logo">
-    <img src="@/assets/logo.png" class="logo__img" />
+    <img
+      src="@/assets/logo.png"
+      class="logo__img"
+    >
     <span class="logo__text">FASTNOTE</span>
   </div>
 </template>

@@ -1,37 +1,40 @@
 <template>
-    <transition name="notifier__animation">
-        <div v-if="shown" class="notifier">
-            Note added successfully!
-        </div>
-    </transition>
+  <transition name="notifier__animation">
+    <div
+      v-if="shown"
+      class="notifier"
+    >
+      Note added successfully!
+    </div>
+  </transition>
 </template>
 
 <script>
-    import { ref, watch } from '@vue/composition-api'
-    import useFilledLists from '@/composables/use-filled-lists'
-    export default {
-        setup() {
-            const shown = ref(false)
+import { ref, watch } from '@vue/composition-api'
+import useFilledLists from '@/composables/use-filled-lists'
+export default {
+  setup() {
+    const shown = ref(false)
 
-            useFilledLists.onNoteAdded = () => {
-                shown.value = true
-            }
-
-            let timeOut;
-            watch(() => shown.value, () => {
-                if (shown.value) {
-                    clearTimeout(timeOut)
-                    timeOut = setTimeout(() => {
-                        shown.value = false
-                    }, 1500)
-                }
-            })
-
-            return {
-                shown
-            }
-        }
+    useFilledLists.onNoteAdded = () => {
+      shown.value = true
     }
+
+    let timeOut
+    watch(() => shown.value, () => {
+      if (shown.value) {
+        clearTimeout(timeOut)
+        timeOut = setTimeout(() => {
+          shown.value = false
+        }, 1500)
+      }
+    })
+
+    return {
+      shown
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

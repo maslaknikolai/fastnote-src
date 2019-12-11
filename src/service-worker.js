@@ -1,6 +1,6 @@
 const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
   maxRetentionTime: 24 * 60
-});
+})
 
 workbox.routing.registerRoute(
   /\/api\/.*\/*.json/,
@@ -8,4 +8,4 @@ workbox.routing.registerRoute(
     plugins: [bgSyncPlugin]
   }),
   'POST'
-);
+)

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueCompositionApi from '@vue/composition-api';
+import VueCompositionApi from '@vue/composition-api'
 import VTooltip from 'v-tooltip'
 
 import App from './App.vue'
@@ -15,7 +15,7 @@ import './registerServiceWorker'
 import './sass/main.scss'
 
 Vue.use(VTooltip)
-Vue.use(VueCompositionApi);
+Vue.use(VueCompositionApi)
 
 Vue.use(methods)
 Vue.use(components)

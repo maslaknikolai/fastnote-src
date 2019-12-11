@@ -1,19 +1,50 @@
 <template>
   <div class="registration">
-    <div class="mb-2">Lets create account</div>
+    <div class="mb-2">
+      Lets create account
+    </div>
 
-    <Field v-model="name" :rules="[v => !!v]" class="registration__field" label="Name" @input="nameErrors = []" />
+    <Field
+      v-model="name"
+      :rules="[v => !!v]"
+      class="registration__field"
+      label="Name"
+      @input="nameErrors = []"
+    />
     <FormErrors :errors="nameErrors" />
 
-    <Field v-model="email" :rules="[v => !!v && !!v.match(emailRegex) ]" class="registration__field" label="Email" @input="emailErrors = []" />
+    <Field
+      v-model="email"
+      :rules="[v => !!v && !!v.match(emailRegex)]"
+      class="registration__field"
+      label="Email"
+      @input="emailErrors = []"
+    />
     <FormErrors :errors="emailErrors" />
 
-    <Field v-model="password" :rules="[v => !!v && v.length >= 6]" class="registration__field" type="password" label="Password" @input="passwordErrors = []" />
+    <Field
+      v-model="password"
+      :rules="[v => !!v && v.length >= 6]"
+      class="registration__field"
+      type="password"
+      label="Password"
+      @input="passwordErrors = []"
+    />
     <FormErrors :errors="passwordErrors" />
 
     <div class="mt-2">
-      <Btn @click="registrate()" :disabled="loading">Create account</Btn>
-      <Btn text @click="$emit('login')">Already have an account</Btn>
+      <Btn
+        @click="registrate()"
+        :disabled="loading"
+      >
+        Create account
+      </Btn>
+      <Btn
+        text
+        @click="$emit('login')"
+      >
+        Already have an account
+      </Btn>
     </div>
 
     <Loading v-if="loading" />

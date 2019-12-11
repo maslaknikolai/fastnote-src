@@ -6,11 +6,16 @@
         'colorselect--changeable': changeable
       }
     ]"
-    :style="{ backgroundColor: color }"
+    :style="{backgroundColor: color}"
     v-tooltip="changeable ? 'Click to select color' : false"
     @click="openColorSelect()"
   >
-    <input type="color" class="colorselect__input" ref="input" v-model="color">
+    <input
+      type="color"
+      class="colorselect__input"
+      ref="input"
+      v-model="color"
+    >
   </div>
 </template>
 

@@ -1,6 +1,8 @@
 <template>
   <div class="personal">
-    <div class="personal__title mb-3">Profile:</div>
+    <div class="personal__title mb-3">
+      Profile:
+    </div>
     <Loading v-if="loading" />
 
     <template v-else>
@@ -11,7 +13,9 @@
         Email: {{ userEmail }}
       </div>
 
-      <Btn @click="logout()">Logout</Btn>
+      <Btn @click="logout()">
+        Logout
+      </Btn>
 
       <Channels />
     </template>

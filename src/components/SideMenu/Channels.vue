@@ -9,23 +9,19 @@
 </template>
 
 <script>
-  import { useStore } from '@/composables/use-store'
-  import { computed } from '@vue/composition-api'
+import { useStore } from '@/composables/use-store'
+import { computed } from '@vue/composition-api'
 
-  export default {
-    setup() {
-      const store = useStore()
-      const userModule = store.state.user
+export default {
+  setup() {
+    const store = useStore()
+    const userModule = store.state.user
 
-      const channels = computed(() => userModule.user.channels)
+    const channels = computed(() => userModule.user.channels)
 
-      return {
-        channels
-      }
+    return {
+      channels
     }
   }
+}
 </script>
-
-<style lang="scss" scoped>
-
-</style>

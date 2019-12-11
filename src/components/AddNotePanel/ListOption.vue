@@ -8,7 +8,10 @@
     ]"
     @click="$emit('click')"
   >
-    <Color class="mr-2" v-model="option.color" />
+    <Color
+      class="mr-2"
+      v-model="option.color"
+    />
     <div>{{ option.name }}</div>
   </button>
 </template>

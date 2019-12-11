@@ -1,6 +1,14 @@
 <template>
-  <transition-group tag="ul" class="errors" name="errors">
-    <li v-for="error in errors" :key="error" class="errors__item">
+  <transition-group
+    tag="ul"
+    class="errors"
+    name="errors"
+  >
+    <li
+      v-for="error in errors"
+      :key="error"
+      class="errors__item"
+    >
       {{ error }}
     </li>
   </transition-group>

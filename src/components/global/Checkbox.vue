@@ -1,6 +1,11 @@
 <template>
   <label class="check">
-    <input v-model="Value" type="checkbox" class="check__input" :disabled="disabled">
+    <input
+      v-model="Value"
+      type="checkbox"
+      class="check__input"
+      :disabled="disabled"
+    >
     <span class="check__label">{{ label }}</span>
   </label>
 </template>

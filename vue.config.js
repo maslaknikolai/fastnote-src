@@ -8,13 +8,14 @@ module.exports = {
       }
     }
   },
+
   publicPath: '',
+
   pwa: {
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
       swSrc: 'src/service-worker.js'
     },
     themeColor: '#67368C'
-  },
-  lintOnSave: true
+  }
 }

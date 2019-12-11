@@ -2,7 +2,7 @@
   <div
     class="icon"
     v-html="icons[icon]"
-    :style="{ width: `${size}px` }"
+    :style="{width: `${size}px`}"
     v-on="$listeners"
   />
 </template>

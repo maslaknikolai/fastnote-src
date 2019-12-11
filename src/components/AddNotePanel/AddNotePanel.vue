@@ -1,8 +1,11 @@
 <template>
   <div>
     <transition name="addnote__animation">
-      <div class="addnote" v-if="show">
-        <CloseBtn @click="show = false"/>
+      <div
+        class="addnote"
+        v-if="show"
+      >
+        <CloseBtn @click="show = false" />
 
         <Lists />
 

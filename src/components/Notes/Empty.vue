@@ -1,13 +1,13 @@
 <template functional>
-    <div
-      class="empty"
-    >
-      You have no any notes yet. Click "+" button to create your first note.
-    </div>
+  <div
+    class="empty"
+  >
+    You have no any notes yet. Click "+" button to create your first note.
+  </div>
 </template>
 
 <script>
-    export default {}
+export default {}
 </script>
 
 <style lang="scss" scoped>

@@ -1,9 +1,15 @@
 <template>
   <div class="hamburger">
     {{ userName }}
-    <button class="hamburger__btn" v-on="$listeners">
+    <button
+      class="hamburger__btn"
+      v-on="$listeners"
+    >
       <Loading v-if="loading" />
-      <Icon v-else icon="cloud-computing" />
+      <Icon
+        v-else
+        icon="cloud-computing"
+      />
     </button>
   </div>
 </template>

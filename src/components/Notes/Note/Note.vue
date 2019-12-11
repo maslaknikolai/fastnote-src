@@ -2,7 +2,10 @@
   <div class="note">
     <div class="note__header">
       <Date v-model="note.date_create" />
-      <DeleteBtn @confirm="remove(note)" ref="removeBtn" />
+      <DeleteBtn
+        @confirm="remove(note)"
+        ref="removeBtn"
+      />
     </div>
 
     <Answers
