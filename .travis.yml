@@ -7,8 +7,6 @@ cache:
 script:
   - npm run test:unit
   - yarn build
-after_script:
-  - cat ./coverage/lcov.info | coveralls
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN
