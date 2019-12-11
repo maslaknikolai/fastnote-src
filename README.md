@@ -1,29 +1,6 @@
-# client
+# PWA SPA for fast noting any stuff
 
-## Project setup
-```
-yarn install
-```
+[https://maslaknikolai.github.io/fastnote](https://maslaknikolai.github.io/fastnote)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Create some option lists
+- Create notes by selecting options in this lists
